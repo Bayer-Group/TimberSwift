@@ -15,7 +15,7 @@ public struct LogMessage {
     public let properties: [String: Any]?
     
     public var fileName: String {
-        let fileNsString = ((file as NSString).lastPathComponent as NSString)
+        let fileNsString = NSString(string: NSString(string: file).lastPathComponent)
         return "\(fileNsString.deletingPathExtension).\(fileNsString.pathExtension)"
     }
     
