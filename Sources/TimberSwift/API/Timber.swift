@@ -86,16 +86,16 @@ extension Timber: UserMessageDelegate {
 }
 
 extension Timber: PerformanceDelegate {
-    func startTrace(key: String, properties: [String: Any]?) {
-        Timber.timberApplicationDelegate?.startTrace(key: key, properties: properties, source: source)
+    func startTrace(key: String, identifier: UUID?, properties: [String: Any]?) {
+        Timber.timberApplicationDelegate?.startTrace(key: key, identifier: identifier, properties: properties, source: source)
     }
     
-    func incrementTraceCounter(key: String, named: String, by count: Int) {
-        Timber.timberApplicationDelegate?.incrementTraceCounter(key: key, named: named, by: count, source: source)
+    func incrementTraceCounter(key: String, identifier: UUID?, named: String, by count: Int) {
+        Timber.timberApplicationDelegate?.incrementTraceCounter(key: key, identifier: identifier, named: named, by: count, source: source)
     }
     
-    func stopTrace(key: String) {
-        Timber.timberApplicationDelegate?.stopTrace(key: key, source: source)
+    func stopTrace(key: String, identifier: UUID?) {
+        Timber.timberApplicationDelegate?.stopTrace(key: key, identifier: identifier, source: source)
     }
 }
 

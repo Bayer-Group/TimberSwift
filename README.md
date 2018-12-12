@@ -1,7 +1,7 @@
 # TimberSwift
 
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Swift 4.1](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platforms](https://img.shields.io/badge/Platforms-macOS%20%7C%20Linux%20%7C%20iOS%20%7C%20tvOS%20%7C%20watchOS-green.svg?style=flat)](https://swift.org/package-manager/)
 
 What is TimberSwift?
@@ -61,9 +61,9 @@ func recordEvent(title: String, properties: [String: Any]?, source: Source)
 func log(_ logMessage: LogMessage)
 func log(_ error: TimberError)
 func toast(_ message: String, displayTime: TimeInterval, type: ToastType, source: Source)
-func startTrace(key: String, properties: [String: Any]?, source: Source)
-func incrementTraceCounter(key: String, named: String, by count: Int, source: Source)
-func stopTrace(key: String, source: Source)
+func startTrace(key: String, identifier: UUID?, properties: [String: Any]?, source: Source)
+func incrementTraceCounter(key: String, identifier: UUID?, named: String, by count: Int, source: Source)
+func stopTrace(key: String, identifier: UUID?, source: Source)
 func networkActivityStarted(source: Source)
 func networkActivityEnded(source: Source)
 ```

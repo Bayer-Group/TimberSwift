@@ -12,14 +12,14 @@ public protocol TimberApplicationDelegate: class {
     func log(_ logMessage: LogMessage)
     /** The delegation from Log for a error */
     func log(_ error: TimberError)
-    /** The delegation from Message for a toast message */
+    /** The delegation from UserMessage for a user facing message */
     func toast(_ message: String, displayTime: TimeInterval, type: ToastType, source: Source)
-    /** The delegation from Trace for starting a trace */
-    func startTrace(key: String, properties: [String: Any]?, source: Source)
-    /** The delegation from Trace for incrementing a trace by name and a specific amount */
-    func incrementTraceCounter(key: String, named: String, by count: Int, source: Source)
-    /** The delegation from Trace for stopping a trace */
-    func stopTrace(key: String, source: Source)
+    /** The delegation from Performance for starting a trace */
+    func startTrace(key: String, identifier: UUID?, properties: [String: Any]?, source: Source)
+    /** The delegation from Performance for incrementing a trace by name and a specific amount */
+    func incrementTraceCounter(key: String, identifier: UUID?, named: String, by count: Int, source: Source)
+    /** The delegation from Performance for stopping a trace */
+    func stopTrace(key: String, identifier: UUID?, source: Source)
     /** The delegation from Network to notify the parent app that network activity has started */
     func networkActivityStarted(source: Source)
     /** The delegation from Network to notify the parent app that network activity has ended */
