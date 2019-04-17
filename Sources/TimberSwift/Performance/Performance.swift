@@ -28,17 +28,17 @@ public protocol PerformanceProtocol {
 
 public extension PerformanceProtocol {
     @available(*, deprecated, message: "A UUID Identifier is now part of the signature and this will be removed in a future version")
-    public func startTrace(key: String, properties: [String: Any]?) {
+    func startTrace(key: String, properties: [String: Any]?) {
         return startTrace(key: key, identifier: nil, properties: properties)
     }
     
     @available(*, deprecated, message: "A UUID Identifier is now part of the signature and this will be removed in a future version")
-    public func incrementTraceCounter(key: String, named: String, by count: Int) {
+    func incrementTraceCounter(key: String, named: String, by count: Int) {
         incrementTraceCounter(key: key, identifier: nil, named: named, by: count)
     }
     
     @available(*, deprecated, message: "A UUID Identifier is now part of the signature and this will be removed in a future version")
-    public func stopTrace(key: String) {
+    func stopTrace(key: String) {
         stopTrace(key: key, identifier: nil)
     }
 }
