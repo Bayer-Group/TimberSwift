@@ -17,7 +17,5 @@ internal protocol UserMessageDelegate: class {
 internal class UserMessage: UserMessageProtocol {
     weak var userMessageDelegate: UserMessageDelegate?
     
-    func toast(_ message: String, displayTime: TimeInterval, type: ToastType) {
-        userMessageDelegate?.toast(message, displayTime: displayTime, type: type)
-    }
+    func toast(_ message: String, displayTime: TimeInterval, type: ToastType) { userMessageDelegate?.toast(message, displayTime: displayTime, type: type) }
 }

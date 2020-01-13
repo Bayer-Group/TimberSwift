@@ -22,7 +22,5 @@ public enum LogLevel: Int, Comparable, Hashable {
         }
     }
     
-    public static func < (lhs: LogLevel, rhs: LogLevel) -> Bool {
-        return lhs.rawValue < rhs.rawValue
-    }
+    public static func < (lhs: LogLevel, rhs: LogLevel) -> Bool { lhs.rawValue < rhs.rawValue }
 }

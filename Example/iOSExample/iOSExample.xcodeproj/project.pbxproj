@@ -14,7 +14,23 @@
 		1E5497DC20ABC3C500FE50EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E5497DA20ABC3C500FE50EC /* LaunchScreen.storyboard */; };
 		1E5497EB20ABC47100FE50EC /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5497E920ABC47100FE50EC /* AppSession.swift */; };
 		1E5497EC20ABC47100FE50EC /* ExampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5497EA20ABC47100FE50EC /* ExampleClass.swift */; };
+		60119CB223CD0D390008FAC7 /* TimberSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60119CB123CD0D390008FAC7 /* TimberSwift.framework */; };
+		60119CB323CD0D390008FAC7 /* TimberSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60119CB123CD0D390008FAC7 /* TimberSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		60119CB423CD0D390008FAC7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				60119CB323CD0D390008FAC7 /* TimberSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1E5497CE20ABC3C400FE50EC /* iOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +42,7 @@
 		1E5497DD20ABC3C500FE50EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E5497E920ABC47100FE50EC /* AppSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
 		1E5497EA20ABC47100FE50EC /* ExampleClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleClass.swift; sourceTree = "<group>"; };
+		60119CB123CD0D390008FAC7 /* TimberSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TimberSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60119CB223CD0D390008FAC7 /* TimberSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +62,7 @@
 			children = (
 				1E5497D020ABC3C400FE50EC /* iOSExample */,
 				1E5497CF20ABC3C400FE50EC /* Products */,
+				60119CB023CD0D390008FAC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +89,14 @@
 			name = iOSExample;
 			sourceTree = "<group>";
 		};
+		60119CB023CD0D390008FAC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60119CB123CD0D390008FAC7 /* TimberSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,12 +107,15 @@
 				1E5497CA20ABC3C400FE50EC /* Sources */,
 				1E5497CB20ABC3C400FE50EC /* Frameworks */,
 				1E5497CC20ABC3C400FE50EC /* Resources */,
+				60119CB423CD0D390008FAC7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = iOSExample;
+			packageProductDependencies = (
+			);
 			productName = iOSExample;
 			productReference = 1E5497CE20ABC3C400FE50EC /* iOSExample.app */;
 			productType = "com.apple.product-type.application";
@@ -115,6 +145,8 @@
 				Base,
 			);
 			mainGroup = 1E5497C520ABC3C400FE50EC;
+			packageReferences = (
+			);
 			productRefGroup = 1E5497CF20ABC3C400FE50EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

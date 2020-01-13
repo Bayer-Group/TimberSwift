@@ -13,11 +13,7 @@ internal protocol NetworkDelegate: class {
 internal class Network: NetworkProtocol {
     weak var networkDelegate: NetworkDelegate?
 
-    func startedActivity() {
-        networkDelegate?.startedActivity()
-    }
+    func startedActivity() { networkDelegate?.startedActivity() }
     
-    func endedActivity() {
-        networkDelegate?.endedActivity()
-    }
+    func endedActivity() { networkDelegate?.endedActivity() }
 }
