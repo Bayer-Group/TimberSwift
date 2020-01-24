@@ -26,23 +26,6 @@ public protocol PerformanceProtocol {
     func stopTrace(key: String, identifier: UUID?)
 }
 
-public extension PerformanceProtocol {
-    @available(*, deprecated, message: "A UUID Identifier is now part of the signature and this will be removed in a future version")
-    func startTrace(key: String, properties: [String: Any]?) {
-        return startTrace(key: key, identifier: nil, properties: properties)
-    }
-    
-    @available(*, deprecated, message: "A UUID Identifier is now part of the signature and this will be removed in a future version")
-    func incrementTraceCounter(key: String, named: String, by count: Int) {
-        incrementTraceCounter(key: key, identifier: nil, named: named, by: count)
-    }
-    
-    @available(*, deprecated, message: "A UUID Identifier is now part of the signature and this will be removed in a future version")
-    func stopTrace(key: String) {
-        stopTrace(key: key, identifier: nil)
-    }
-}
-
 internal protocol PerformanceDelegate: class {
     func startTrace(key: String, identifier: UUID?, properties: [String: Any]?)
     func incrementTraceCounter(key: String, identifier: UUID?, named: String, by count: Int)
@@ -52,15 +35,9 @@ internal protocol PerformanceDelegate: class {
 internal class Performance: PerformanceProtocol {
     weak var performanceDelegate: PerformanceDelegate?
     
-    func startTrace(key: String, identifier: UUID?, properties: [String: Any]?) {
-        performanceDelegate?.startTrace(key: key, identifier: identifier, properties: properties)
-    }
+    func startTrace(key: String, identifier: UUID?, properties: [String: Any]?) { performanceDelegate?.startTrace(key: key, identifier: identifier, properties: properties) }
     
-    func incrementTraceCounter(key: String, identifier: UUID?, named: String, by count: Int) {
-        performanceDelegate?.incrementTraceCounter(key: key, identifier: identifier, named: named, by: count)
-    }
+    func incrementTraceCounter(key: String, identifier: UUID?, named: String, by count: Int) { performanceDelegate?.incrementTraceCounter(key: key, identifier: identifier, named: named, by: count) }
     
-    func stopTrace(key: String, identifier: UUID?) {
-        performanceDelegate?.stopTrace(key: key, identifier: identifier)
-    }
+    func stopTrace(key: String, identifier: UUID?) { performanceDelegate?.stopTrace(key: key, identifier: identifier) }
 }

@@ -13,27 +13,21 @@ public extension LogProtocol {
      - parameter message: The reason for the log
      - parameter properties: Supplementary key/value pairs for when more than a message is needed
      */
-    func debug(_ message: String, properties: [String: Any]? = nil, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
-        return self.log(message, errorType: nil, properties: properties, file, function, line, logLevel: .debug)
-    }
+    func debug(_ message: String, properties: [String: Any]? = nil, _ file: String = #file, _ function: String = #function, _ line: Int = #line) { log(message, errorType: nil, properties: properties, file, function, line, logLevel: .debug) }
     
     /**
      Logs with the log level of info.
      - parameter message: The reason for the log
      - parameter properties: Supplementary key/value pairs for when more than a message is needed
      */
-    func info(_ message: String, properties: [String: Any]? = nil, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
-        return self.log(message, errorType: nil, properties: properties, file, function, line, logLevel: .info)
-    }
+    func info(_ message: String, properties: [String: Any]? = nil, _ file: String = #file, _ function: String = #function, _ line: Int = #line) { log(message, errorType: nil, properties: properties, file, function, line, logLevel: .info) }
     
     /**
      Logs with the log level of warning.
      - parameter message: The reason for the log
      - parameter properties: Supplementary key/value pairs for when more than a message is needed
      */
-    func warning(_ message: String, properties: [String: Any]? = nil, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
-        return self.log(message, errorType: nil, properties: properties, file, function, line, logLevel: .warning)
-    }
+    func warning(_ message: String, properties: [String: Any]? = nil, _ file: String = #file, _ function: String = #function, _ line: Int = #line) { log(message, errorType: nil, properties: properties, file, function, line, logLevel: .warning) }
     
     /**
      Logs with the log level of debug.
@@ -41,9 +35,7 @@ public extension LogProtocol {
      - parameter errorType: The type of error and code to log
      - parameter properties: Supplementary error key/value pairs. The key is expected to be space seperated capitalized words.
      */
-    func error(_ message: String, errorType: TimberErrorType, properties: [String: Any]? = nil, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
-        return self.log(message, errorType: errorType, properties: properties, file, function, line, logLevel: .error)
-    }
+    func error(_ message: String, errorType: TimberErrorType, properties: [String: Any]? = nil, _ file: String = #file, _ function: String = #function, _ line: Int = #line) { log(message, errorType: errorType, properties: properties, file, function, line, logLevel: .error) }
 }
 
 internal protocol LogDelegate: class {

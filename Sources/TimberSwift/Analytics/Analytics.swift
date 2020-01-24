@@ -23,11 +23,7 @@ internal protocol AnalyticsDelegate: class {
 internal class Analytics: AnalyticsProtocol {
     weak var analyticsDelegate: AnalyticsDelegate?
     
-    func setScreen(title: String) {
-        analyticsDelegate?.setScreen(title: title)
-    }
+    func setScreen(title: String) { analyticsDelegate?.setScreen(title: title) }
     
-    func recordEvent(title: String, properties: [String: Any]?) {
-        analyticsDelegate?.recordEvent(title: title, properties: properties)
-    }
+    func recordEvent(title: String, properties: [String: Any]?) { analyticsDelegate?.recordEvent(title: title, properties: properties) }
 }

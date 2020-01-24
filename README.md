@@ -1,7 +1,7 @@
 # TimberSwift
 
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift 5.1](https://img.shields.io/badge/Swift-5.1-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platforms](https://img.shields.io/badge/Platforms-macOS%20%7C%20Linux%20%7C%20iOS%20%7C%20tvOS%20%7C%20watchOS-green.svg?style=flat)](https://swift.org/package-manager/)
 
 What is TimberSwift?
@@ -28,11 +28,11 @@ A library to send all messages from either frameworks or the parent application 
 
 ### Carthage
 
-```github "MonsantoCo/TimberSwift" ~> 0.1.0```
+```github "MonsantoCo/TimberSwift" ~> 0.3.0```
 
 ### Package Manager
 
-```.package(url: "git@github.com:MonsantoCo/TimberSwift.git", from: "0.1.0")```
+```.package(url: "git@github.com:MonsantoCo/TimberSwift.git", from: "0.3.0")```
 
 ## Instructions
 

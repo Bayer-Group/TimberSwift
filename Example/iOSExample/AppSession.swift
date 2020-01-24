@@ -99,9 +99,5 @@ extension AppSession: TimberApplicationDelegate {
 }
 
 fileprivate extension String {
-    func performanceTimeKey(identifier: UUID?) -> String {
-        guard let identifier = identifier?.uuidString else { return self }
-        
-        return "\(self)|\(identifier)"
-    }
+    func performanceTimeKey(identifier: UUID?) -> String { identifier.flatMap { "\(self)|\($0.uuidString)" } ?? self }
 }
