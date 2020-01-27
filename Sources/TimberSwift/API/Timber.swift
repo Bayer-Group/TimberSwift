@@ -37,19 +37,14 @@ public final class Timber: TimberProtocol {
     /**
      - parameter source: The framework or application source
      */
-    public init(source: Source) {
+    public convenience init(source: Source) {
         let analytics = Analytics()
         let log = Log(source: source)
         let userMessage = UserMessage()
         let performance = Performance()
         let network = Network()
         
-        self.source = source
-        self.analytics = analytics
-        self.log = log
-        self.userMessage = userMessage
-        self.performance = performance
-        self.network = network
+        self.init(source: source, analytics: analytics, log: log, userMessage: userMessage, performance: performance, network: network)
         
         analytics.analyticsDelegate = self
         log.logDelegate = self
@@ -57,12 +52,21 @@ public final class Timber: TimberProtocol {
         performance.performanceDelegate = self
         network.networkDelegate = self
     }
+    
+    internal init(source: Source, analytics: AnalyticsProtocol, log: LogProtocol, userMessage: UserMessageProtocol, performance: PerformanceProtocol, network: NetworkProtocol) {
+        self.source = source
+        self.analytics = analytics
+        self.log = log
+        self.userMessage = userMessage
+        self.performance = performance
+        self.network = network
+    }
 }
 
 extension Timber: LogDelegate {
-    func log(_ logMessage: LogMessage) { Timber.timberApplicationDelegate?.log(logMessage) }
+    func log(message: LogMessage) { Timber.timberApplicationDelegate?.log(message: message) }
     
-    func log(_ error: TimberError) { Timber.timberApplicationDelegate?.log(error) }
+    func log(error: TimberError) { Timber.timberApplicationDelegate?.log(error: error) }
 }
 
 extension Timber: AnalyticsDelegate {
@@ -72,7 +76,7 @@ extension Timber: AnalyticsDelegate {
 }
 
 extension Timber: UserMessageDelegate {
-    func toast(_ message: String, displayTime: TimeInterval, type: ToastType) { Timber.timberApplicationDelegate?.toast(message, displayTime: displayTime, type: type, source: source) }
+    func toast(message: String, displayTime: TimeInterval, type: ToastType) { Timber.timberApplicationDelegate?.toast(message: message, displayTime: displayTime, type: type, source: source) }
 }
 
 extension Timber: PerformanceDelegate {

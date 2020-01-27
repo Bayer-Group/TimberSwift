@@ -9,11 +9,11 @@ public protocol TimberApplicationDelegate: class {
     /** The delegation from Analytics recordEvent */
     func recordEvent(title: String, properties: [String: Any]?, source: Source)
     /** The delegation from Log for any log level including error */
-    func log(_ logMessage: LogMessage)
+    func log(message: LogMessage)
     /** The delegation from Log for a error */
-    func log(_ error: TimberError)
+    func log(error: TimberError)
     /** The delegation from UserMessage for a user facing message */
-    func toast(_ message: String, displayTime: TimeInterval, type: ToastType, source: Source)
+    func toast(message: String, displayTime: TimeInterval, type: ToastType, source: Source)
     /** The delegation from Performance for starting a trace */
     func startTrace(key: String, identifier: UUID?, properties: [String: Any]?, source: Source)
     /** The delegation from Performance for incrementing a trace by name and a specific amount */

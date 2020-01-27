@@ -8,6 +8,9 @@
 build/
 DerivedData
 
+## Tools
+Tools/
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
