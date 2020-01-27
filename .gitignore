@@ -1,9 +1,6 @@
 # Mac OS X
 .DS_Store
 
-# Xcode
-*.xcodeproj
-
 ## Build generated
 build/
 DerivedData
