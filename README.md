@@ -68,9 +68,14 @@ func networkActivityStarted(source: Source)
 func networkActivityEnded(source: Source)
 ```
 
-### Running TimberSwift in XCode
-- Bootstrap Example: `rm -rf *.xcodeproj || rm -rf .build || swift package resolve && swift package generate-xcodeproj && open *.xcodeproj`
-- In the Target  `TimberSwift`, select the tab `Signing & Capabilities` and check the box  `Automatically manage signing`
-- In the scheme menu, select `Edit Scheme...`, select the `Test` item on the left, select the tab `Options`, and check the box `Gather coverage for "all targets"`
-- In the target `TimberSwiftTests` select the tab `Build Phases` and add a `Run Script Phase` with the body `$PROJECT_DIR/Scripts/parrot.sh` and move the item to the top of the Buld Phases just below `Dependencies`.
-- In the target `TimberSwift` select the tab `Build Phases` and add a `Run Script Phase` with the body `$PROJECT_DIR/Scripts/swiftlint.sh`.
+## Extending TimberSwift in XCode
+
+#### Option 1: Run with the current XCode project as is
+
+#### Option 2: Rebuild it using `generate-xcodeproj`
+
+- Setup: Package Manager Example: `rm -rf *.xcodeproj || rm -rf .build || swift package resolve && swift package generate-xcodeproj && open *.xcodeproj`
+- Building: In the Target  `TimberSwift`, select the tab `Signing & Capabilities` and check the box  `Automatically manage signing`
+- Code Coverage: In the scheme menu, select `Edit Scheme...`, select the `Test` item on the left, select the tab `Options`, and check the box `Gather coverage for "all targets"`
+- Mocking: In the target `TimberSwiftTests` select the tab `Build Phases` and add a `Run Script Phase` with the body `$PROJECT_DIR/Scripts/parrot.sh` and move the item to the top of the Buld Phases just below `Dependencies`.
+- Linting: In the target `TimberSwift` select the tab `Build Phases` and add a `Run Script Phase` with the body `$PROJECT_DIR/Scripts/swiftlint.sh`.
