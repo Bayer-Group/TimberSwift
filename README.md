@@ -28,11 +28,11 @@ A library to send all messages from either frameworks or the parent application 
 
 ### Carthage
 
-```github "MonsantoCo/TimberSwift" ~> 0.3.0```
+```github "MonsantoCo/TimberSwift" ~> 1.0.0```
 
 ### Package Manager
 
-```.package(url: "git@github.com:MonsantoCo/TimberSwift.git", from: "0.3.0")```
+```.package(url: "git@github.com:MonsantoCo/TimberSwift.git", from: "1.0.0")```
 
 ## Instructions
 
