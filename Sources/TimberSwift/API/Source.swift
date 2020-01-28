@@ -1,4 +1,4 @@
-public struct Source {
+public struct Source: Equatable {
     public let title: String
     public let version: String
     public let emoji: Character

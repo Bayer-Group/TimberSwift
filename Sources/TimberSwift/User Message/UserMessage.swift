@@ -11,11 +11,11 @@ public protocol UserMessageProtocol {
 }
 
 internal protocol UserMessageDelegate: class {
-    func toast(_ message: String, displayTime: TimeInterval, type: ToastType)
+    func toast(message: String, displayTime: TimeInterval, type: ToastType)
 }
 
 internal class UserMessage: UserMessageProtocol {
     weak var userMessageDelegate: UserMessageDelegate?
     
-    func toast(_ message: String, displayTime: TimeInterval, type: ToastType) { userMessageDelegate?.toast(message, displayTime: displayTime, type: type) }
+    func toast(_ message: String, displayTime: TimeInterval, type: ToastType) { userMessageDelegate?.toast(message: message, displayTime: displayTime, type: type) }
 }

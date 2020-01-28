@@ -39,8 +39,8 @@ public extension LogProtocol {
 }
 
 internal protocol LogDelegate: class {
-    func log(_ logMessage: LogMessage)
-    func log(_ error: TimberError)
+    func log(message: LogMessage)
+    func log(error: TimberError)
 }
 
 internal class Log: LogProtocol {
@@ -55,10 +55,10 @@ internal class Log: LogProtocol {
     func log(_ message: String, errorType: TimberErrorType?, properties: [String: Any]? = nil, _ file: String, _ function: String, _ line: Int, logLevel: LogLevel) {
         let logMessage = LogMessage(message: message, logLevel: logLevel, source: source, file: file, function: function, line: line, properties: properties, errorType: errorType)
         
-        logDelegate?.log(logMessage)
+        logDelegate?.log(message: logMessage)
         
         if let errorType = errorType, logLevel == .error {
-            logDelegate?.log(TimberError(logMessage: logMessage, errorType: errorType))
+            logDelegate?.log(error: TimberError(logMessage: logMessage, errorType: errorType))
         }
     }
 }

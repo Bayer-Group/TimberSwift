@@ -29,7 +29,7 @@ public struct LogMessage {
         return consoleMessage
     }
     
-    internal let errorType: TimberErrorType?
+    private let errorType: TimberErrorType?
     
     internal init(message: String, logLevel: LogLevel, source: Source, file: String, function: String, line: Int, properties: [String: Any]? = nil, errorType: TimberErrorType? = nil) {
         self.message = message
