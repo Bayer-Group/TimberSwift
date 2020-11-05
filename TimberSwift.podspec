@@ -8,5 +8,5 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/MonsantoCo/TimberSwift.git', :tag => s.version }
   s.source_files     = 'Sources/TimberSwift/**/*'
   s.platform         = :ios, "10.0"
-  s.swift_versions   = ["5"]
+  s.swift_versions   = ["5.3"]
 end
