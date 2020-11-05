@@ -32,20 +32,16 @@
          sourceTree = "<group>";
       };
       "OBJ_100" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_47";
-      };
-      "OBJ_101" = {
          isa = "PBXFrameworksBuildPhase";
          files = (
-            "OBJ_102"
+            "OBJ_101"
          );
       };
-      "OBJ_102" = {
+      "OBJ_101" = {
          isa = "PBXBuildFile";
          fileRef = "TimberSwift::TimberSwift::Product";
       };
-      "OBJ_103" = {
+      "OBJ_102" = {
          isa = "PBXTargetDependency";
          target = "TimberSwift::TimberSwift";
       };
@@ -403,8 +399,8 @@
       "OBJ_48" = {
          isa = "PBXGroup";
          children = (
-            "TimberSwift::TimberSwift::Product",
-            "TimberSwift::TimberSwiftTests::Product"
+            "TimberSwift::TimberSwiftTests::Product",
+            "TimberSwift::TimberSwift::Product"
          );
          name = "Products";
          path = "";
@@ -421,50 +417,85 @@
             "OBJ_52",
             "OBJ_53",
             "OBJ_54",
-            "OBJ_55",
-            "OBJ_56"
+            "OBJ_55"
          );
          path = "";
          sourceTree = "<group>";
       };
       "OBJ_51" = {
          isa = "PBXFileReference";
-         path = "Tools";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_52" = {
-         isa = "PBXFileReference";
-         path = "Scripts";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_53" = {
-         isa = "PBXFileReference";
          path = "LICENSE";
          sourceTree = "<group>";
       };
-      "OBJ_54" = {
+      "OBJ_52" = {
+         isa = "PBXFileReference";
+         path = "TimberSwift.podspec";
+         sourceTree = "<group>";
+      };
+      "OBJ_53" = {
          isa = "PBXFileReference";
          path = "MAINTAINERS";
          sourceTree = "<group>";
       };
-      "OBJ_55" = {
+      "OBJ_54" = {
          isa = "PBXFileReference";
          path = "README.md";
          sourceTree = "<group>";
       };
-      "OBJ_56" = {
+      "OBJ_55" = {
          isa = "PBXFileReference";
          path = "CONTRIBUTING.md";
          sourceTree = "<group>";
       };
-      "OBJ_58" = {
+      "OBJ_57" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_59",
-            "OBJ_60"
+            "OBJ_58",
+            "OBJ_59"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
+      };
+      "OBJ_58" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "TimberSwift.xcodeproj/TimberSwift_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "9.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "TimberSwift";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "TimberSwift";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
       };
       "OBJ_59" = {
          isa = "XCBuildConfiguration";
@@ -478,54 +509,7 @@
                "$(inherited)"
             );
             INFOPLIST_FILE = "TimberSwift.xcodeproj/TimberSwift_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "TimberSwift";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "5.0";
-            TARGET_NAME = "TimberSwift";
-            TVOS_DEPLOYMENT_TARGET = "9.0";
-            WATCHOS_DEPLOYMENT_TARGET = "2.0";
-         };
-         name = "Debug";
-      };
-      "OBJ_6" = {
-         isa = "PBXFileReference";
-         explicitFileType = "sourcecode.swift";
-         path = "Package.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_60" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "TimberSwift.xcodeproj/TimberSwift_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            IPHONEOS_DEPLOYMENT_TARGET = "9.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
                "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
@@ -554,9 +538,16 @@
          };
          name = "Release";
       };
-      "OBJ_61" = {
+      "OBJ_6" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         path = "Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_60" = {
          isa = "PBXSourcesBuildPhase";
          files = (
+            "OBJ_61",
             "OBJ_62",
             "OBJ_63",
             "OBJ_64",
@@ -568,41 +559,44 @@
             "OBJ_70",
             "OBJ_71",
             "OBJ_72",
-            "OBJ_73",
-            "OBJ_74"
+            "OBJ_73"
          );
       };
-      "OBJ_62" = {
+      "OBJ_61" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_10";
       };
-      "OBJ_63" = {
+      "OBJ_62" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_11";
       };
-      "OBJ_64" = {
+      "OBJ_63" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_12";
       };
-      "OBJ_65" = {
+      "OBJ_64" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_14";
       };
-      "OBJ_66" = {
+      "OBJ_65" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_16";
       };
-      "OBJ_67" = {
+      "OBJ_66" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_17";
       };
-      "OBJ_68" = {
+      "OBJ_67" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_18";
       };
-      "OBJ_69" = {
+      "OBJ_68" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_19";
+      };
+      "OBJ_69" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_20";
       };
       "OBJ_7" = {
          isa = "PBXGroup";
@@ -615,37 +609,51 @@
       };
       "OBJ_70" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_20";
+         fileRef = "OBJ_22";
       };
       "OBJ_71" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_22";
+         fileRef = "OBJ_24";
       };
       "OBJ_72" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_24";
+         fileRef = "OBJ_26";
       };
       "OBJ_73" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_26";
-      };
-      "OBJ_74" = {
-         isa = "PBXBuildFile";
          fileRef = "OBJ_27";
       };
-      "OBJ_75" = {
+      "OBJ_74" = {
          isa = "PBXFrameworksBuildPhase";
          files = (
          );
       };
-      "OBJ_77" = {
+      "OBJ_76" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_78",
-            "OBJ_79"
+            "OBJ_77",
+            "OBJ_78"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
+      };
+      "OBJ_77" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-sdk",
+               "/Applications/Xcode-12.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.3.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Debug";
       };
       "OBJ_78" = {
          isa = "XCBuildConfiguration";
@@ -656,36 +664,20 @@
                "5",
                "-I",
                "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
                "-sdk",
-               "/Applications/Xcode-11.3.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "/Applications/Xcode-12.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
                "-package-description-version",
-               "5.1"
-            );
-            SWIFT_VERSION = "5.0";
-         };
-         name = "Debug";
-      };
-      "OBJ_79" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "5",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode-11.3.1.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
-               "-package-description-version",
-               "5.1"
+               "5.3.0"
             );
             SWIFT_VERSION = "5.0";
          };
          name = "Release";
+      };
+      "OBJ_79" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_80"
+         );
       };
       "OBJ_8" = {
          isa = "PBXGroup";
@@ -702,48 +694,81 @@
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_80" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_81"
-         );
-      };
-      "OBJ_81" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_6";
       };
-      "OBJ_83" = {
+      "OBJ_82" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_84",
-            "OBJ_85"
+            "OBJ_83",
+            "OBJ_84"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
       };
-      "OBJ_84" = {
+      "OBJ_83" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
          };
          name = "Debug";
       };
-      "OBJ_85" = {
+      "OBJ_84" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
          };
          name = "Release";
       };
-      "OBJ_86" = {
+      "OBJ_85" = {
          isa = "PBXTargetDependency";
          target = "TimberSwift::TimberSwiftTests";
       };
-      "OBJ_88" = {
+      "OBJ_87" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_89",
-            "OBJ_90"
+            "OBJ_88",
+            "OBJ_89"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
+      };
+      "OBJ_88" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "TimberSwift.xcodeproj/TimberSwiftTests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "14.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "TimberSwiftTests";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
       };
       "OBJ_89" = {
          isa = "XCBuildConfiguration";
@@ -758,63 +783,13 @@
                "$(inherited)"
             );
             INFOPLIST_FILE = "TimberSwift.xcodeproj/TimberSwiftTests_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            IPHONEOS_DEPLOYMENT_TARGET = "14.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
                "@loader_path/../Frameworks",
                "@loader_path/Frameworks"
             );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "5.0";
-            TARGET_NAME = "TimberSwiftTests";
-            TVOS_DEPLOYMENT_TARGET = "9.0";
-            WATCHOS_DEPLOYMENT_TARGET = "2.0";
-         };
-         name = "Debug";
-      };
-      "OBJ_9" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_10",
-            "OBJ_11",
-            "OBJ_12"
-         );
-         name = "API";
-         path = "API";
-         sourceTree = "<group>";
-      };
-      "OBJ_90" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "TimberSwift.xcodeproj/TimberSwiftTests_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
-            );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            MACOSX_DEPLOYMENT_TARGET = "10.15";
             OTHER_CFLAGS = (
                "$(inherited)"
             );
@@ -834,9 +809,21 @@
          };
          name = "Release";
       };
-      "OBJ_91" = {
+      "OBJ_9" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_10",
+            "OBJ_11",
+            "OBJ_12"
+         );
+         name = "API";
+         path = "API";
+         sourceTree = "<group>";
+      };
+      "OBJ_90" = {
          isa = "PBXSourcesBuildPhase";
          files = (
+            "OBJ_91",
             "OBJ_92",
             "OBJ_93",
             "OBJ_94",
@@ -844,47 +831,50 @@
             "OBJ_96",
             "OBJ_97",
             "OBJ_98",
-            "OBJ_99",
-            "OBJ_100"
+            "OBJ_99"
          );
       };
-      "OBJ_92" = {
+      "OBJ_91" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_31";
       };
-      "OBJ_93" = {
+      "OBJ_92" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_34";
       };
-      "OBJ_94" = {
+      "OBJ_93" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_36";
       };
-      "OBJ_95" = {
+      "OBJ_94" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_38";
       };
-      "OBJ_96" = {
+      "OBJ_95" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_40";
       };
-      "OBJ_97" = {
+      "OBJ_96" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_42";
       };
-      "OBJ_98" = {
+      "OBJ_97" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_44";
       };
-      "OBJ_99" = {
+      "OBJ_98" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_46";
       };
+      "OBJ_99" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_47";
+      };
       "TimberSwift::SwiftPMPackageDescription" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_77";
+         buildConfigurationList = "OBJ_76";
          buildPhases = (
-            "OBJ_80"
+            "OBJ_79"
          );
          dependencies = (
          );
@@ -894,10 +884,10 @@
       };
       "TimberSwift::TimberSwift" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_58";
+         buildConfigurationList = "OBJ_57";
          buildPhases = (
-            "OBJ_61",
-            "OBJ_75"
+            "OBJ_60",
+            "OBJ_74"
          );
          dependencies = (
          );
@@ -913,24 +903,24 @@
       };
       "TimberSwift::TimberSwiftPackageTests::ProductTarget" = {
          isa = "PBXAggregateTarget";
-         buildConfigurationList = "OBJ_83";
+         buildConfigurationList = "OBJ_82";
          buildPhases = (
          );
          dependencies = (
-            "OBJ_86"
+            "OBJ_85"
          );
          name = "TimberSwiftPackageTests";
          productName = "TimberSwiftPackageTests";
       };
       "TimberSwift::TimberSwiftTests" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_88";
+         buildConfigurationList = "OBJ_87";
          buildPhases = (
-            "OBJ_91",
-            "OBJ_101"
+            "OBJ_90",
+            "OBJ_100"
          );
          dependencies = (
-            "OBJ_103"
+            "OBJ_102"
          );
          name = "TimberSwiftTests";
          productName = "TimberSwiftTests";

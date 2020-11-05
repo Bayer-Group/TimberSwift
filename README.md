@@ -53,7 +53,7 @@ timber.network.startedActivity()
 timber.network.endedActivity()
 ```
 
-### The parent application should assign itself as the TimberApplicationDelegate as soon as possble to receive any and all messages from Timber objects.
+### The parent application should assign itself as the TimberApplicationDelegate as soon as possible to receive any and all messages from Timber objects.
 
 ```
 func setScreen(title: String, source: Source)
