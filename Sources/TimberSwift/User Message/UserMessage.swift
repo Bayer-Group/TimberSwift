@@ -10,7 +10,7 @@ public protocol UserMessageProtocol {
     func toast(_ message: String, displayTime: TimeInterval, type: ToastType)
 }
 
-internal protocol UserMessageDelegate: class {
+internal protocol UserMessageDelegate: AnyObject {
     func toast(message: String, displayTime: TimeInterval, type: ToastType)
 }
 

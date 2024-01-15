@@ -38,7 +38,7 @@ public extension LogProtocol {
     func error(_ message: String, errorType: TimberErrorType, properties: [String: Any]? = nil, _ file: String = #file, _ function: String = #function, _ line: Int = #line) { log(message, errorType: errorType, properties: properties, file, function, line, logLevel: .error) }
 }
 
-internal protocol LogDelegate: class {
+internal protocol LogDelegate: AnyObject {
     func log(message: LogMessage)
     func log(error: TimberError)
 }

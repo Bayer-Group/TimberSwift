@@ -5,7 +5,7 @@ public protocol NetworkProtocol {
     func endedActivity()
 }
 
-internal protocol NetworkDelegate: class {
+internal protocol NetworkDelegate: AnyObject {
     func startedActivity()
     func endedActivity()
 }

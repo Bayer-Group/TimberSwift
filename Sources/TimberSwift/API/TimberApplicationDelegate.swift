@@ -3,7 +3,7 @@ import Foundation
 /**
  A set of functions which are called when an associated action in a timber instance is performed.
  */
-public protocol TimberApplicationDelegate: class {
+public protocol TimberApplicationDelegate: AnyObject {
     /** The delegation from Analytics setScreen */
     func setScreen(title: String, source: Source)
     /** The delegation from Analytics recordEvent */

@@ -26,7 +26,7 @@ public protocol PerformanceProtocol {
     func stopTrace(key: String, identifier: UUID?)
 }
 
-internal protocol PerformanceDelegate: class {
+internal protocol PerformanceDelegate: AnyObject {
     func startTrace(key: String, identifier: UUID?, properties: [String: Any]?)
     func incrementTraceCounter(key: String, identifier: UUID?, named: String, by count: Int)
     func stopTrace(key: String, identifier: UUID?)
