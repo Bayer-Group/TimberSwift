@@ -15,7 +15,7 @@ public protocol AnalyticsProtocol {
     func recordEvent(title: String, properties: [String: Any]?)
 }
 
-internal protocol AnalyticsDelegate: class {
+internal protocol AnalyticsDelegate: AnyObject {
     func setScreen(title: String)
     func recordEvent(title: String, properties: [String: Any]?)
 }
